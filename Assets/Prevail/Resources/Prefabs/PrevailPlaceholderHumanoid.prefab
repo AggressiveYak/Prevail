@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 114119951390078650}
   - component: {fileID: 114802200892817152}
   - component: {fileID: 114742800276161300}
+  - component: {fileID: 114568482353154118}
   m_Layer: 0
   m_Name: PrevailPlaceholderHumanoid
   m_TagString: Untagged
@@ -828,6 +829,18 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+--- !u!114 &114568482353154118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404134197906634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e9db6d1f41da047ac5d7eabb82e477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!114 &114742800276161300
 MonoBehaviour:
   m_ObjectHideFlags: 1

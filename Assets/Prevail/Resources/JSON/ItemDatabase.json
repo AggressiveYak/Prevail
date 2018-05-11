@@ -1,0 +1,222 @@
+{
+    "items": [
+        {
+            "itemName": "Standard Helmet",
+            "slug": "starterHelmet",
+            "ID": 0,
+            "itemType": 0,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Standard issue Ranger Helmet",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Standard Chestguard",
+            "slug": "starterChest",
+            "ID": 1,
+            "itemType": 1,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Standard issue Ranger Chestguard",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Standard Arm Guards",
+            "slug": "starterArms",
+            "ID": 2,
+            "itemType": 2,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Standard issue Ranger Arm Guards",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Standard Belt",
+            "slug": "starterWaist",
+            "ID": 3,
+            "itemType": 3,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Standard issue Ranger Belt",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Standard Boots",
+            "slug": "starterLegs",
+            "ID": 4,
+            "itemType": 4,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Standard issue Ranger Boots",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Mineral",
+            "slug": "mineral",
+            "ID": 5,
+            "itemType": 5,
+            "action": 2,
+            "stats": [],
+            "description": "Shiny",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Ivory",
+            "slug": "ivory",
+            "ID": 6,
+            "itemType": 5,
+            "action": 2,
+            "stats": [],
+            "description": "It's very white",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "Hide",
+            "slug": "hide",
+            "ID": 7,
+            "itemType": 5,
+            "action": 2,
+            "stats": [],
+            "description": "Taken from a wild animal.",
+            "modifier": false,
+            "stackable": false
+        }
+    ]
+}
