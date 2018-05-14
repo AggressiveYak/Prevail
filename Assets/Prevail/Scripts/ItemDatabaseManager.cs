@@ -11,12 +11,12 @@ public class ItemDatabaseManager : PersistentSingleton<ItemDatabaseManager>
     protected override void Awake()
     {
         base.Awake();
-        //BuildDataBase();
+        BuildDataBase();
     }
 
     private void BuildDataBase()
     {
-        ItemDatabase.LoadFromJson();
+        itemDataBase =  ItemDatabase.LoadFromJson();
         //string itemsAsJson = File.ReadAllText("Assets/Prevail/Resources/ItemDatabase.json");
         //Items = JsonUtility.FromJson<ItemDatabase>(itemsAsJson).items;
     }

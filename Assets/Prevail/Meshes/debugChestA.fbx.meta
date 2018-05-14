@@ -1,64 +1,67 @@
 fileFormatVersion: 2
-guid: 717f1da09488587429dab0c4a11dfd7b
+guid: 4b6d9bd15ebc3c64aaf1c8ec561b4e7f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Character
-    100002: HIPS
-    100004: joint13
-    100006: joint14
-    100008: joint6
-    100010: joint7
-    100012: L_Arn
-    100014: L_Foot
-    100016: L_Foot 1
-    100018: L_ForeArm
-    100020: L_Leg
-    100022: L_Shoulder
-    100024: L_Toe_End
-    100026: L_UpLeg
-    100028: L_Wrist
-    100030: //RootNode
-    100032: R_Arn
-    100034: R_Foot
-    100036: R_Foot 1
-    100038: R_ForeArm
-    100040: R_Leg
-    100042: R_Shoulder
-    100044: R_Toe_End
-    100046: R_UpLeg
-    100048: R_Wrist
+    100002: //RootNode
+    100004: ChestA
+    100006: HIPS
+    100008: joint13
+    100010: joint14
+    100012: joint6
+    100014: joint7
+    100016: L_Arn
+    100018: L_Foot
+    100020: L_Foot 1
+    100022: L_ForeArm
+    100024: L_Leg
+    100026: L_Shoulder
+    100028: L_Toe_End
+    100030: L_UpLeg
+    100032: L_Wrist
+    100034: R_Arn
+    100036: R_Foot
+    100038: R_Foot 1
+    100040: R_ForeArm
+    100042: R_Leg
+    100044: R_Shoulder
+    100046: R_Toe_End
+    100048: R_UpLeg
+    100050: R_Wrist
+    100052: transform3
     400000: Character
-    400002: HIPS
-    400004: joint13
-    400006: joint14
-    400008: joint6
-    400010: joint7
-    400012: L_Arn
-    400014: L_Foot
-    400016: L_Foot 1
-    400018: L_ForeArm
-    400020: L_Leg
-    400022: L_Shoulder
-    400024: L_Toe_End
-    400026: L_UpLeg
-    400028: L_Wrist
-    400030: //RootNode
-    400032: R_Arn
-    400034: R_Foot
-    400036: R_Foot 1
-    400038: R_ForeArm
-    400040: R_Leg
-    400042: R_Shoulder
-    400044: R_Toe_End
-    400046: R_UpLeg
-    400048: R_Wrist
-    2100000: CharacterBase
-    2100002: UnderWear
-    2100004: lambert1
-    4300000: Character
+    400002: //RootNode
+    400004: ChestA
+    400006: HIPS
+    400008: joint13
+    400010: joint14
+    400012: joint6
+    400014: joint7
+    400016: L_Arn
+    400018: L_Foot
+    400020: L_Foot 1
+    400022: L_ForeArm
+    400024: L_Leg
+    400026: L_Shoulder
+    400028: L_Toe_End
+    400030: L_UpLeg
+    400032: L_Wrist
+    400034: R_Arn
+    400036: R_Foot
+    400038: R_Foot 1
+    400040: R_ForeArm
+    400042: R_Leg
+    400044: R_Shoulder
+    400046: R_Toe_End
+    400048: R_UpLeg
+    400050: R_Wrist
+    400052: transform3
+    2100000: ArmorA
+    2100002: ArmorB
+    4300000: ChestA
     9500000: //RootNode
-    13700000: Character
+    13700000: ChestA
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -118,7 +121,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human:
@@ -428,7 +431,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 717f1da09488587429dab0c4a11dfd7b,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0

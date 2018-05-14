@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 717f1da09488587429dab0c4a11dfd7b
+guid: cfba06019f6cbdd42b3a8cf345548f36
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -19,15 +19,27 @@ ModelImporter:
     100026: L_UpLeg
     100028: L_Wrist
     100030: //RootNode
-    100032: R_Arn
-    100034: R_Foot
-    100036: R_Foot 1
-    100038: R_ForeArm
-    100040: R_Leg
-    100042: R_Shoulder
-    100044: R_Toe_End
-    100046: R_UpLeg
-    100048: R_Wrist
+    100032: polySurface1
+    100034: polySurface3
+    100036: polySurface4
+    100038: polySurface6
+    100040: polySurface6 1
+    100042: polySurface7
+    100044: R_Arn
+    100046: R_Foot
+    100048: R_Foot 1
+    100050: R_ForeArm
+    100052: R_Leg
+    100054: R_Shoulder
+    100056: R_Toe_End
+    100058: R_UpLeg
+    100060: R_Wrist
+    100062: transform10
+    100064: transform3
+    100066: transform4
+    100068: transform7
+    100070: transform8
+    100072: transform9
     400000: Character
     400002: HIPS
     400004: joint13
@@ -44,21 +56,31 @@ ModelImporter:
     400026: L_UpLeg
     400028: L_Wrist
     400030: //RootNode
-    400032: R_Arn
-    400034: R_Foot
-    400036: R_Foot 1
-    400038: R_ForeArm
-    400040: R_Leg
-    400042: R_Shoulder
-    400044: R_Toe_End
-    400046: R_UpLeg
-    400048: R_Wrist
-    2100000: CharacterBase
-    2100002: UnderWear
-    2100004: lambert1
-    4300000: Character
+    400032: polySurface1
+    400034: polySurface3
+    400036: polySurface4
+    400038: polySurface6
+    400040: polySurface6 1
+    400042: polySurface7
+    400044: R_Arn
+    400046: R_Foot
+    400048: R_Foot 1
+    400050: R_ForeArm
+    400052: R_Leg
+    400054: R_Shoulder
+    400056: R_Toe_End
+    400058: R_UpLeg
+    400060: R_Wrist
+    400062: transform10
+    400064: transform3
+    400066: transform4
+    400068: transform7
+    400070: transform8
+    400072: transform9
+    2100000: ArmorA
+    4300000: polySurface6
     9500000: //RootNode
-    13700000: Character
+    13700000: polySurface6
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -291,19 +313,139 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: PrevailPlaceholderHumanoid(Clone)
+    - name: LegsA(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character
-      parentName: PrevailPlaceholderHumanoid(Clone)
+      parentName: LegsA(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface1
+      parentName: Character
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform4
+      parentName: polySurface1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform3
+      parentName: Character
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface3
+      parentName: LegsA(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform7
+      parentName: polySurface3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface4
+      parentName: LegsA(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface6 1
+      parentName: polySurface4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform10
+      parentName: polySurface6 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform8
+      parentName: polySurface4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface6
+      parentName: LegsA(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface7
+      parentName: LegsA(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: transform9
+      parentName: polySurface7
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: HIPS
-      parentName: PrevailPlaceholderHumanoid(Clone)
+      parentName: LegsA(Clone)
       position: {x: -0, y: 1.1157783, z: 0.003979339}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint6
+      parentName: HIPS
+      position: {x: -0, y: 0.23338413, z: 0.020473994}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint7
+      parentName: joint6
+      position: {x: 7.771561e-18, y: 0.20941749, z: -0.037399217}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint13
+      parentName: joint7
+      position: {x: -7.771561e-18, y: 0.27290225, z: 0.01849313}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: joint14
+      parentName: joint13
+      position: {x: -0, y: 0.1433671, z: 0.06656698}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Shoulder
+      parentName: joint7
+      position: {x: -0.14700599, y: 0.15706, z: 0.012945883}
+      rotation: {x: -0.000000018529905, y: 0.19148491, z: -0.2968188, w: 0.9355385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Arn
+      parentName: L_Shoulder
+      position: {x: -0.05377, y: -0.07358, z: -0.047468238}
+      rotation: {x: 0.10863446, y: -0.016469015, z: -0.20201874, w: 0.9731987}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_ForeArm
+      parentName: L_Arn
+      position: {x: -0.099048994, y: -0.21224001, z: -0.035960786}
+      rotation: {x: 0.25219747, y: -0.1404995, z: 0.026890373, w: 0.957044}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Wrist
+      parentName: L_ForeArm
+      position: {x: -0.135839, y: -0.21933, z: 0.12802039}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Shoulder
+      parentName: joint7
+      position: {x: 0.14700599, y: 0.15706, z: 0.012945883}
+      rotation: {x: 0.93553853, y: 0.29681873, z: 0.1914847, w: -0.0000000185299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Arn
+      parentName: R_Shoulder
+      position: {x: 0.05377, y: 0.07358, z: 0.0474682}
+      rotation: {x: 0.10863438, y: -0.01646888, z: -0.202019, w: 0.9731988}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_ForeArm
+      parentName: R_Arn
+      position: {x: 0.099048994, y: 0.21224001, z: 0.0359608}
+      rotation: {x: 0.25219768, y: -0.14049949, z: 0.026890337, w: 0.95704395}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Wrist
+      parentName: R_ForeArm
+      position: {x: 0.135839, y: 0.21933, z: -0.12802039}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: L_UpLeg
@@ -329,66 +471,6 @@ ModelImporter:
     - name: L_Toe_End
       parentName: L_Foot 1
       position: {x: -0.023970723, y: -0.013028554, z: 0.08792191}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint6
-      parentName: HIPS
-      position: {x: -0, y: 0.23338413, z: 0.020473994}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint7
-      parentName: joint6
-      position: {x: 7.771561e-18, y: 0.20941749, z: -0.037399217}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_Shoulder
-      parentName: joint7
-      position: {x: -0.14700599, y: 0.15706, z: 0.012945883}
-      rotation: {x: -0.000000018529905, y: 0.19148491, z: -0.2968188, w: 0.9355385}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_Arn
-      parentName: L_Shoulder
-      position: {x: -0.05377, y: -0.07358, z: -0.047468238}
-      rotation: {x: 0.10863446, y: -0.016469015, z: -0.20201874, w: 0.9731987}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_ForeArm
-      parentName: L_Arn
-      position: {x: -0.099048994, y: -0.21224001, z: -0.035960786}
-      rotation: {x: 0.25219747, y: -0.1404995, z: 0.026890373, w: 0.957044}
-      scale: {x: 1, y: 1, z: 1}
-    - name: L_Wrist
-      parentName: L_ForeArm
-      position: {x: -0.135839, y: -0.21933, z: 0.12802039}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint13
-      parentName: joint7
-      position: {x: -7.771561e-18, y: 0.27290225, z: 0.01849313}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: joint14
-      parentName: joint13
-      position: {x: -0, y: 0.1433671, z: 0.06656698}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_Shoulder
-      parentName: joint7
-      position: {x: 0.14700599, y: 0.15706, z: 0.012945883}
-      rotation: {x: 0.93553853, y: 0.29681873, z: 0.1914847, w: -0.0000000185299}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_Arn
-      parentName: R_Shoulder
-      position: {x: 0.05377, y: 0.07358, z: 0.0474682}
-      rotation: {x: 0.10863438, y: -0.01646888, z: -0.202019, w: 0.9731988}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_ForeArm
-      parentName: R_Arn
-      position: {x: 0.099048994, y: 0.21224001, z: 0.0359608}
-      rotation: {x: 0.25219768, y: -0.14049949, z: 0.026890337, w: 0.95704395}
-      scale: {x: 1, y: 1, z: 1}
-    - name: R_Wrist
-      parentName: R_ForeArm
-      position: {x: 0.135839, y: 0.21933, z: -0.12802039}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: R_UpLeg

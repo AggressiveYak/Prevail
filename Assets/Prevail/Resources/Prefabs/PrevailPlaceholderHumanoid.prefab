@@ -193,6 +193,8 @@ GameObject:
   - component: {fileID: 114802200892817152}
   - component: {fileID: 114742800276161300}
   - component: {fileID: 114568482353154118}
+  - component: {fileID: 114113308026362020}
+  - component: {fileID: 114538453105679932}
   m_Layer: 0
   m_Name: PrevailPlaceholderHumanoid
   m_TagString: Untagged
@@ -778,6 +780,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114113308026362020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404134197906634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169df326e446b584c86f939f48202451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingItems: []
 --- !u!114 &114119951390078650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -829,6 +843,83 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+--- !u!114 &114538453105679932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404134197906634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4330fd329fd0b948a58bf753eb45aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 1559028087591064}
+  head: {fileID: 0}
+  chest: {fileID: 0}
+  arms: {fileID: 0}
+  waist: {fileID: 0}
+  legs: {fileID: 0}
+  equippedHead:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  equippedChest:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  equippedArms:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  equippedWaist:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  equippedLegs:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  equippedWeapon:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
 --- !u!114 &114568482353154118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -923,6 +1014,7 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 717f1da09488587429dab0c4a11dfd7b, type: 3}
   - {fileID: 2100002, guid: 717f1da09488587429dab0c4a11dfd7b, type: 3}
+  - {fileID: 2100004, guid: 717f1da09488587429dab0c4a11dfd7b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

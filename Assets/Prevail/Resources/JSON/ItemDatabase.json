@@ -1,6 +1,376 @@
 {
     "items": [
         {
+            "itemName": "DebugHeadA",
+            "slug": "debugHeadA",
+            "ID": 5000,
+            "itemType": 0,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugChestA",
+            "slug": "debugChestA",
+            "ID": 5001,
+            "itemType": 1,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugArmsA",
+            "slug": "debugArmsA",
+            "ID": 5002,
+            "itemType": 2,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugWaistA",
+            "slug": "debugWaistA",
+            "ID": 5003,
+            "itemType": 3,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugLegsA",
+            "slug": "debugLegsA",
+            "ID": 5004,
+            "itemType": 4,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugHeadB",
+            "slug": "debugHeadB",
+            "ID": 5000,
+            "itemType": 0,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugChestB",
+            "slug": "debugChestB",
+            "ID": 5001,
+            "itemType": 1,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugArmsB",
+            "slug": "debugArmsB",
+            "ID": 5002,
+            "itemType": 2,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugWaistB",
+            "slug": "debugWaistB",
+            "ID": 5003,
+            "itemType": 3,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugLegsB",
+            "slug": "debugLegsB",
+            "ID": 5004,
+            "itemType": 4,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "It blue.",
+            "modifier": false,
+            "stackable": false
+        },
+        {
             "itemName": "Standard Helmet",
             "slug": "starterHelmet",
             "ID": 0,
