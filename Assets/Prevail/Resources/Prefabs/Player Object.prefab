@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4627679569326704}
   - component: {fileID: 114321537833358140}
   - component: {fileID: 114676864850106614}
+  - component: {fileID: 114031860335881832}
   m_Layer: 0
   m_Name: Player Object
   m_TagString: Untagged
@@ -41,6 +42,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114031860335881832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969493570483580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b914d7ef10e63b349a9455562c7b004e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  chest:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  arms:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  waist:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
+  legs:
+    itemName: 
+    slug: 
+    ID: 0
+    itemType: 0
+    action: 0
+    stats: []
+    description: 
+    modifier: 0
+    stackable: 0
 --- !u!114 &114321537833358140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,7 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUnitPrefab: {fileID: 1404134197906634, guid: 4143ed0b6dedcf74eb028d88f6abcfd0,
-    type: 2}
-  playerCamera: {fileID: 1867662550041514, guid: 9b4e13db94e98784bb1cb04226f1a683,
     type: 2}
   playerName: Anonymous

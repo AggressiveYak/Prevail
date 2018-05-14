@@ -1,214 +1,104 @@
 fileFormatVersion: 2
-guid: d89ea37480b6d75458aa38843e9688dc
+guid: 342029a6c59b290428264978e4238bbf
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Chest
-    100002: //RootNode
-    100004: Geo_grp
-    100006: Head
-    100008: Hips
-    100010: Jaw
-    100012: JawEND
-    100014: Le_Eye_Mesh
-    100016: LeftArm
-    100018: LeftCheek
-    100020: LeftEye
-    100022: LeftEyelidLower
-    100024: LeftEyelidUpper
-    100026: LeftFoot
-    100028: LeftForeArm
-    100030: LeftHand
-    100032: LeftHandIndex1
-    100034: LeftHandIndex2
-    100036: LeftHandIndex3
-    100038: LeftHandMiddle1
-    100040: LeftHandMiddle2
-    100042: LeftHandMiddle3
-    100044: LeftHandPinky1
-    100046: LeftHandPinky2
-    100048: LeftHandPinky3
-    100050: LeftHandRing1
-    100052: LeftHandRing2
-    100054: LeftHandRing3
-    100056: LeftHandThumb1
-    100058: LeftHandThumb2
-    100060: LeftHandThumb3
-    100062: LeftInnerBrow
-    100064: LeftIOuterBrow
-    100066: LeftLeg
-    100068: LeftLipCorner
-    100070: LeftLipLower
-    100072: LeftLipUpper
-    100074: LeftNostril
-    100076: LeftShoulder
-    100078: LeftToes
-    100080: LeftUpLeg
-    100082: Lw_Teeth_Mesh
-    100084: Neck
-    100086: Reference
-    100088: Ri_Eye_Mesh
-    100090: RightArm
-    100092: RightCheek
-    100094: RightEye
-    100096: RightEyelidLower
-    100098: RightEyelidUpper
-    100100: RightFoot
-    100102: RightForeArm
-    100104: RightHand
-    100106: RightHandIndex1
-    100108: RightHandIndex2
-    100110: RightHandIndex3
-    100112: RightHandMiddle1
-    100114: RightHandMiddle2
-    100116: RightHandMiddle3
-    100118: RightHandPinky1
-    100120: RightHandPinky2
-    100122: RightHandPinky3
-    100124: RightHandRing1
-    100126: RightHandRing2
-    100128: RightHandRing3
-    100130: RightHandThumb1
-    100132: RightHandThumb2
-    100134: RightHandThumb3
-    100136: RightInnerBrow
-    100138: RightIOuterBrow
-    100140: RightLeg
-    100142: RightLipCorner
-    100144: RightLipLower
-    100146: RightLipUpper
-    100148: RightNostril
-    100150: RightShoulder
-    100152: RightToes
-    100154: RightUpLeg
-    100156: Spine
-    100158: TongueBack
-    100160: TongueTip
-    100162: Tounge_Mesh
-    100164: Unity_Body_Mesh
-    100166: Up_Teeth_Mesh
-    400000: Chest
+    100000: //RootNode
+    100002: ArmsA
+    100004: ArmsA1
+    100006: ArmsA2
+    100008: Character
+    100010: HIPS
+    100012: joint13
+    100014: joint14
+    100016: joint6
+    100018: joint7
+    100020: L_Arn
+    100022: L_Foot
+    100024: L_Foot 1
+    100026: L_ForeArm
+    100028: L_Leg
+    100030: L_Shoulder
+    100032: L_Toe_End
+    100034: L_UpLeg
+    100036: L_Wrist
+    100038: polySurface1
+    100040: R_Arn
+    100042: R_Foot
+    100044: R_Foot 1
+    100046: R_ForeArm
+    100048: R_Leg
+    100050: R_Shoulder
+    100052: R_Toe_End
+    100054: R_UpLeg
+    100056: R_Wrist
+    100058: transform3
+    100060: transform4
+    100062: transform5
+    100064: transform6
+    100066: polySurface2
+    100068: polySurface3
+    100070: pSphere1
+    100072: transform1
+    100074: transform2
+    400000: ArmsA
     400002: //RootNode
-    400004: Geo_grp
-    400006: Head
-    400008: Hips
-    400010: Jaw
-    400012: JawEND
-    400014: Le_Eye_Mesh
-    400016: LeftArm
-    400018: LeftCheek
-    400020: LeftEye
-    400022: LeftEyelidLower
-    400024: LeftEyelidUpper
-    400026: LeftFoot
-    400028: LeftForeArm
-    400030: LeftHand
-    400032: LeftHandIndex1
-    400034: LeftHandIndex2
-    400036: LeftHandIndex3
-    400038: LeftHandMiddle1
-    400040: LeftHandMiddle2
-    400042: LeftHandMiddle3
-    400044: LeftHandPinky1
-    400046: LeftHandPinky2
-    400048: LeftHandPinky3
-    400050: LeftHandRing1
-    400052: LeftHandRing2
-    400054: LeftHandRing3
-    400056: LeftHandThumb1
-    400058: LeftHandThumb2
-    400060: LeftHandThumb3
-    400062: LeftInnerBrow
-    400064: LeftIOuterBrow
-    400066: LeftLeg
-    400068: LeftLipCorner
-    400070: LeftLipLower
-    400072: LeftLipUpper
-    400074: LeftNostril
-    400076: LeftShoulder
-    400078: LeftToes
-    400080: LeftUpLeg
-    400082: Lw_Teeth_Mesh
-    400084: Neck
-    400086: Reference
-    400088: Ri_Eye_Mesh
-    400090: RightArm
-    400092: RightCheek
-    400094: RightEye
-    400096: RightEyelidLower
-    400098: RightEyelidUpper
-    400100: RightFoot
-    400102: RightForeArm
-    400104: RightHand
-    400106: RightHandIndex1
-    400108: RightHandIndex2
-    400110: RightHandIndex3
-    400112: RightHandMiddle1
-    400114: RightHandMiddle2
-    400116: RightHandMiddle3
-    400118: RightHandPinky1
-    400120: RightHandPinky2
-    400122: RightHandPinky3
-    400124: RightHandRing1
-    400126: RightHandRing2
-    400128: RightHandRing3
-    400130: RightHandThumb1
-    400132: RightHandThumb2
-    400134: RightHandThumb3
-    400136: RightInnerBrow
-    400138: RightIOuterBrow
-    400140: RightLeg
-    400142: RightLipCorner
-    400144: RightLipLower
-    400146: RightLipUpper
-    400148: RightNostril
-    400150: RightShoulder
-    400152: RightToes
-    400154: RightUpLeg
-    400156: Spine
-    400158: TongueBack
-    400160: TongueTip
-    400162: Tounge_Mesh
-    400164: Unity_Body_Mesh
-    400166: Up_Teeth_Mesh
-    2300000: Le_Eye_Mesh
-    2300002: Ri_Eye_Mesh
-    3300000: Le_Eye_Mesh
-    3300002: Ri_Eye_Mesh
-    4300000: Unity_Body_Mesh
-    4300002: Up_Teeth_Mesh
-    4300004: Lw_Teeth_Mesh
-    4300006: Tounge_Mesh
-    4300008: Le_Eye_Mesh
-    4300010: Ri_Eye_Mesh
-    7400000: UNTY_Sneak_tk04
-    7400002: HumanoidCrouchIdle
-    7400004: HumanoidCrouchWalk
-    7400006: HumanoidCrouchWalkRight
-    7400008: HumanoidCrouchWalkLeft
-    7400010: HumanoidCrouchTurnRight
-    7400012: HumanoidCrouchTurnLeft
-    7400014: HumanoidCrouchWalkRightB
+    400004: ArmsA1
+    400006: ArmsA2
+    400008: Character
+    400010: HIPS
+    400012: joint13
+    400014: joint14
+    400016: joint6
+    400018: joint7
+    400020: L_Arn
+    400022: L_Foot
+    400024: L_Foot 1
+    400026: L_ForeArm
+    400028: L_Leg
+    400030: L_Shoulder
+    400032: L_Toe_End
+    400034: L_UpLeg
+    400036: L_Wrist
+    400038: polySurface1
+    400040: R_Arn
+    400042: R_Foot
+    400044: R_Foot 1
+    400046: R_ForeArm
+    400048: R_Leg
+    400050: R_Shoulder
+    400052: R_Toe_End
+    400054: R_UpLeg
+    400056: R_Wrist
+    400058: transform3
+    400060: transform4
+    400062: transform5
+    400064: transform6
+    400066: polySurface2
+    400068: polySurface3
+    400070: pSphere1
+    400072: transform1
+    400074: transform2
+    2100000: ArmorA
+    4300000: ArmsA2
+    4300002: polySurface3
     9500000: //RootNode
-    13700000: Lw_Teeth_Mesh
-    13700002: Tounge_Mesh
-    13700004: Unity_Body_Mesh
-    13700006: Up_Teeth_Mesh
+    13700000: ArmsA2
+    13700002: polySurface3
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
-    materialName: 1
-    materialSearch: 2
-    materialLocation: 0
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
-      does not match:\n\tTransform 'HIPS' for human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -216,220 +106,24 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: HumanoidCrouchIdle
-      takeName: Take 001
-      firstFrame: 264
-      lastFrame: 319
-      wrapMode: 0
-      orientationOffsetY: -38
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 1
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidCrouchWalk
-      takeName: Take 001
-      firstFrame: 105
-      lastFrame: 159
-      wrapMode: 0
-      orientationOffsetY: -38
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidCrouchWalkRight
-      takeName: Take 001
-      firstFrame: 2193
-      lastFrame: 2245
-      wrapMode: 0
-      orientationOffsetY: -38
-      level: 0
-      cycleOffset: 0.3
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidCrouchWalkLeft
-      takeName: Take 001
-      firstFrame: 1542
-      lastFrame: 1610
-      wrapMode: 0
-      orientationOffsetY: -38
-      level: 0
-      cycleOffset: 0.71
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidCrouchTurnRight
-      takeName: Take 001
-      firstFrame: 1932
-      lastFrame: 1976
-      wrapMode: 0
-      orientationOffsetY: -38
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidCrouchTurnLeft
-      takeName: Take 001
-      firstFrame: 1932
-      lastFrame: 1976
-      wrapMode: 0
-      orientationOffsetY: 38
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 1
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: HumanoidCrouchWalkRightB
-      takeName: Take 001
-      firstFrame: 1542
-      lastFrame: 1610
-      wrapMode: 0
-      orientationOffsetY: 38
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 1
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.01
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -437,19 +131,19 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 4
-    normalCalculationMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 1
   humanDescription:
