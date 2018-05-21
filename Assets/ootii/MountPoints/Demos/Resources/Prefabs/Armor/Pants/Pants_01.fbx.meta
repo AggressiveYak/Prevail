@@ -1,0 +1,85 @@
+fileFormatVersion: 2
+guid: 7eebc5fa89f0f724faef3a3d457a10dc
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: mixamorig:Hips
+    100002: mixamorig:LeftFoot
+    100004: mixamorig:LeftLeg
+    100006: mixamorig:LeftUpLeg
+    100008: mixamorig:RightFoot
+    100010: mixamorig:RightLeg
+    100012: mixamorig:RightUpLeg
+    100014: //RootNode
+    100016: Pants_01:Mesh
+    100018: Pants_02:Mesh
+    400000: mixamorig:Hips
+    400002: mixamorig:LeftFoot
+    400004: mixamorig:LeftLeg
+    400006: mixamorig:LeftUpLeg
+    400008: mixamorig:RightFoot
+    400010: mixamorig:RightLeg
+    400012: mixamorig:RightUpLeg
+    400014: //RootNode
+    400016: Pants_01:Mesh
+    400018: Pants_02:Mesh
+    4300000: Pants_01:Mesh
+    4300002: Pants_02:Mesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Pants_01:Mesh
+    13700002: Pants_02:Mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

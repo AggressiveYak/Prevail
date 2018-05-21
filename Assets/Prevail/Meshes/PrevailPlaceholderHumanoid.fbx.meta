@@ -55,6 +55,7 @@ ModelImporter:
     400048: R_Wrist
     2100000: CharacterBase
     2100002: UnderWear
+    2100004: lambert1
     4300000: Character
     9500000: //RootNode
     13700000: Character
