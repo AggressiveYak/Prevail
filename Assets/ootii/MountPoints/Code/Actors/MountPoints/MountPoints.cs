@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using com.ootii.Helpers;
 
 #if UNITY_EDITOR && OOTII_PROFILE
@@ -22,7 +23,7 @@ namespace com.ootii.Actors
     /// </summary>
     [Serializable]
     [AddComponentMenu("ootii/Mount Points/Mount List")]
-    public class MountPoints : MonoBehaviour
+    public class MountPoints : NetworkBehaviour
     {
         /// <summary>
         /// Determines if we use body masks to help hide body penetration

@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 114521216849989336}
   - component: {fileID: 114258550048063664}
   - component: {fileID: 114270681071301846}
+  - component: {fileID: 114062144583937100}
   m_Layer: 0
   m_Name: FemalePlaceholderHumanoid
   m_TagString: Untagged
@@ -153,6 +154,21 @@ GameObject:
   - component: {fileID: 4706607513068232}
   m_Layer: 0
   m_Name: pasted__pasted__pasted__joint17 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1118708969278158
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4479516133049864}
+  m_Layer: 0
+  m_Name: MP_Back Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,6 +319,21 @@ GameObject:
   - component: {fileID: 4602575606127392}
   m_Layer: 0
   m_Name: L_INDEX1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1356313992894602
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4435816598388534}
+  m_Layer: 0
+  m_Name: MP_Main Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,6 +670,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1603583651179882
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4101179137048018}
+  m_Layer: 0
+  m_Name: MP_Back Sword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1651406097447526
 GameObject:
   m_ObjectHideFlags: 1
@@ -664,6 +710,21 @@ GameObject:
   - component: {fileID: 4414147889941906}
   m_Layer: 0
   m_Name: joint13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1695706109771400
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4098153203888166}
+  m_Layer: 0
+  m_Name: MP_Off Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1190,6 +1251,32 @@ Transform:
   m_Father: {fileID: 4614198080068368}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4098153203888166
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695706109771400}
+  m_LocalRotation: {x: -0.487616, y: 0.43486908, z: 0.7570458, w: -0.0010832548}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 4233670298599666}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4101179137048018
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1603583651179882}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5340573, w: -0.8454483}
+  m_LocalPosition: {x: -0.325, y: -0.148, z: 0.141}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 4715867470788902}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4123110224659560
 Transform:
   m_ObjectHideFlags: 1
@@ -1301,6 +1388,7 @@ Transform:
   - {fileID: 4662146325890654}
   - {fileID: 4333389208207314}
   - {fileID: 4001247703430222}
+  - {fileID: 4435816598388534}
   m_Father: {fileID: 4850132343983408}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1333,6 +1421,7 @@ Transform:
   - {fileID: 4604981027942488}
   - {fileID: 4777490223848542}
   - {fileID: 4148605377494438}
+  - {fileID: 4098153203888166}
   m_Father: {fileID: 4221562548769584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1517,6 +1606,19 @@ Transform:
   m_Father: {fileID: 4809877839909656}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4435816598388534
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356313992894602}
+  m_LocalRotation: {x: 0.05394128, y: -0.58885115, z: 0.5893788, w: -0.55043375}
+  m_LocalPosition: {x: 0.036029115, y: 0.07811217, z: 0.048608936}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 4183021911861934}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4440408732275328
 Transform:
   m_ObjectHideFlags: 1
@@ -1584,6 +1686,19 @@ Transform:
   - {fileID: 4326031480760004}
   m_Father: {fileID: 4086726590394114}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4479516133049864
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118708969278158}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.08599808, y: -0.00000005921851, z: 0.13201511}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 4715867470788902}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4487746209806048
 Transform:
@@ -1863,6 +1978,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4497239208439862}
+  - {fileID: 4101179137048018}
+  - {fileID: 4479516133049864}
   m_Father: {fileID: 4067950212844214}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2145,6 +2262,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114062144583937100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084709783046178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2147ce3f1c84cfa4283667521d6fbd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControllerInputBlocked: 0
+  leftStick: {x: 0, y: 0}
+  rightStick: {x: 0, y: 0}
+  leftTrigger: 0
+  rightTrigger: 0
+  aButton: 0
+  bButton: 0
+  xButton: 0
+  yButton: 0
+  leftBumper: 0
+  rightBumper: 0
+  backButton: 0
+  startButton: 0
+  leftClick: 0
+  rightClick: 0
 --- !u!114 &114246040113797866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2182,11 +2325,14 @@ MonoBehaviour:
   arms: {fileID: 0}
   waist: {fileID: 0}
   legs: {fileID: 0}
+  mainHand: {fileID: 0}
+  offHand: {fileID: 0}
   equippedHead:
     itemName: 
     slug: 
     ID: 0
     itemType: 0
+    weaponType: 0
     action: 0
     stats: []
     description: 
@@ -2197,6 +2343,7 @@ MonoBehaviour:
     slug: 
     ID: 0
     itemType: 0
+    weaponType: 0
     action: 0
     stats: []
     description: 
@@ -2207,6 +2354,7 @@ MonoBehaviour:
     slug: 
     ID: 0
     itemType: 0
+    weaponType: 0
     action: 0
     stats: []
     description: 
@@ -2217,6 +2365,7 @@ MonoBehaviour:
     slug: 
     ID: 0
     itemType: 0
+    weaponType: 0
     action: 0
     stats: []
     description: 
@@ -2227,21 +2376,36 @@ MonoBehaviour:
     slug: 
     ID: 0
     itemType: 0
+    weaponType: 0
     action: 0
     stats: []
     description: 
     modifier: 0
     stackable: 0
-  equippedWeapon:
-    itemName: 
-    slug: 
-    ID: 0
-    itemType: 0
-    action: 0
+  equippedMainHand:
+    itemName: NULL
+    slug: null
+    ID: 999999999
+    itemType: 9
+    weaponType: 0
+    action: 3
     stats: []
-    description: 
+    description: THIS ITEM IS NULL
     modifier: 0
     stackable: 0
+  equippedOffHand:
+    itemName: NULL
+    slug: null
+    ID: 999999999
+    itemType: 9
+    weaponType: 0
+    action: 3
+    stats: []
+    description: THIS ITEM IS NULL
+    modifier: 0
+    stackable: 0
+  equippedWeapons: []
+  sheathed: 1
 --- !u!114 &114270681071301846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2256,9 +2420,73 @@ MonoBehaviour:
   _UseBodyMasks: 0
   _Renderer: {fileID: 0}
   _MaterialIndex: 0
-  Points: []
+  Points:
+  - _GUID: 61cc563e-b668-466b-9554-461cee4a5825
+    _Name: Main Hand
+    _BoneName: Unity RightHand
+    _Owner: {fileID: 1084709783046178}
+    _OwnerResourcePath: 
+    _Anchor: {fileID: 1356313992894602}
+    _ParentMountPoint:
+      Owner: {fileID: 0}
+      GUID: 
+    ChildMountPoints: []
+    mIsLocked: 0
+    _AllowChildren: 1
+    _ForceChildOrientation: 1
+    _InvertOrientation: 0
+    _IgnoreParentScale: 1
+    _OriginalScale: {x: 1, y: 1, z: 1}
+  - _GUID: 4d3c0dd4-6770-44d0-8e08-278e0d30ee53
+    _Name: Off Hand
+    _BoneName: Unity LeftHand
+    _Owner: {fileID: 1084709783046178}
+    _OwnerResourcePath: 
+    _Anchor: {fileID: 1695706109771400}
+    _ParentMountPoint:
+      Owner: {fileID: 0}
+      GUID: 
+    ChildMountPoints: []
+    mIsLocked: 0
+    _AllowChildren: 1
+    _ForceChildOrientation: 1
+    _InvertOrientation: 0
+    _IgnoreParentScale: 1
+    _OriginalScale: {x: 1, y: 1, z: 1}
+  - _GUID: 51f0d0c9-032f-4faa-b8ff-f5867940bbbe
+    _Name: Back Sword
+    _BoneName: Unity Chest
+    _Owner: {fileID: 1084709783046178}
+    _OwnerResourcePath: 
+    _Anchor: {fileID: 1603583651179882}
+    _ParentMountPoint:
+      Owner: {fileID: 0}
+      GUID: 
+    ChildMountPoints: []
+    mIsLocked: 0
+    _AllowChildren: 1
+    _ForceChildOrientation: 1
+    _InvertOrientation: 0
+    _IgnoreParentScale: 1
+    _OriginalScale: {x: 1, y: 1, z: 1}
+  - _GUID: 35eaa496-dfcb-4942-99ea-9b27b38885a2
+    _Name: Back Shield
+    _BoneName: Unity Chest
+    _Owner: {fileID: 1084709783046178}
+    _OwnerResourcePath: 
+    _Anchor: {fileID: 1118708969278158}
+    _ParentMountPoint:
+      Owner: {fileID: 0}
+      GUID: 
+    ChildMountPoints: []
+    mIsLocked: 0
+    _AllowChildren: 1
+    _ForceChildOrientation: 1
+    _InvertOrientation: 0
+    _IgnoreParentScale: 1
+    _OriginalScale: {x: 1, y: 1, z: 1}
   SkinnedItems: []
-  EditorPointIndex: -1
+  EditorPointIndex: 1
   EditorItemIndex: -1
 --- !u!114 &114447990545344696
 MonoBehaviour:
@@ -2272,6 +2500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Cam: {fileID: 0}
+  cam: {fileID: 0}
+  input: {fileID: 114062144583937100}
+  equipmentController: {fileID: 0}
 --- !u!114 &114521216849989336
 MonoBehaviour:
   m_ObjectHideFlags: 1

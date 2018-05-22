@@ -5,6 +5,7 @@
             "slug": "debugHeadA",
             "ID": 5000,
             "itemType": 0,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -42,6 +43,7 @@
             "slug": "debugChestA",
             "ID": 5001,
             "itemType": 1,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -79,6 +81,7 @@
             "slug": "debugArmsA",
             "ID": 5002,
             "itemType": 2,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -116,6 +119,7 @@
             "slug": "debugWaistA",
             "ID": 5003,
             "itemType": 3,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -153,6 +157,7 @@
             "slug": "debugLegsA",
             "ID": 5004,
             "itemType": 4,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -186,10 +191,87 @@
             "stackable": false
         },
         {
+            "itemName": "DebugSwordA",
+            "slug": "debugSwordA",
+            "ID": 6001,
+            "itemType": 5,
+            "weaponType": 0,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Debug Sword",
+            "modifier": false,
+            "stackable": false
+        },
+        {
+            "itemName": "DebugShieldA",
+            "slug": "debugShieldA",
+            "ID": 6000,
+            "itemType": 6,
+            "weaponType": 1,
+            "action": 0,
+            "stats": [
+                {
+                    "statType": 0,
+                    "baseValue": 0,
+                    "statDescription": "Health"
+                },
+                {
+                    "statType": 1,
+                    "baseValue": 0,
+                    "statDescription": "Energy"
+                },
+                {
+                    "statType": 2,
+                    "baseValue": 0,
+                    "statDescription": "Attack"
+                },
+                {
+                    "statType": 3,
+                    "baseValue": 0,
+                    "statDescription": "Defense"
+                },
+                {
+                    "statType": 4,
+                    "baseValue": 0,
+                    "statDescription": "Speed"
+                }
+            ],
+            "description": "Debug Shield",
+            "modifier": false,
+            "stackable": false
+        },
+        {
             "itemName": "DebugHeadB",
             "slug": "debugHeadB",
             "ID": 5000,
             "itemType": 0,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -227,6 +309,7 @@
             "slug": "debugChestB",
             "ID": 5001,
             "itemType": 1,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -264,6 +347,7 @@
             "slug": "debugArmsB",
             "ID": 5002,
             "itemType": 2,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -301,6 +385,7 @@
             "slug": "debugWaistB",
             "ID": 5003,
             "itemType": 3,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -338,6 +423,7 @@
             "slug": "debugLegsB",
             "ID": 5004,
             "itemType": 4,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -375,6 +461,7 @@
             "slug": "starterHelmet",
             "ID": 0,
             "itemType": 0,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -412,6 +499,7 @@
             "slug": "starterChest",
             "ID": 1,
             "itemType": 1,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -449,6 +537,7 @@
             "slug": "starterArms",
             "ID": 2,
             "itemType": 2,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -486,6 +575,7 @@
             "slug": "starterWaist",
             "ID": 3,
             "itemType": 3,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -523,6 +613,7 @@
             "slug": "starterLegs",
             "ID": 4,
             "itemType": 4,
+            "weaponType": 3,
             "action": 0,
             "stats": [
                 {
@@ -559,7 +650,8 @@
             "itemName": "Mineral",
             "slug": "mineral",
             "ID": 5,
-            "itemType": 5,
+            "itemType": 7,
+            "weaponType": 3,
             "action": 2,
             "stats": [],
             "description": "Shiny",
@@ -570,7 +662,8 @@
             "itemName": "Ivory",
             "slug": "ivory",
             "ID": 6,
-            "itemType": 5,
+            "itemType": 7,
+            "weaponType": 3,
             "action": 2,
             "stats": [],
             "description": "It's very white",
@@ -581,7 +674,8 @@
             "itemName": "Hide",
             "slug": "hide",
             "ID": 7,
-            "itemType": 5,
+            "itemType": 7,
+            "weaponType": 3,
             "action": 2,
             "stats": [],
             "description": "Taken from a wild animal.",

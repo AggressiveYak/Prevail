@@ -24,23 +24,27 @@ public class ProgrammingTesting : MonoBehaviour
         EquipmentStats.Add(Defense);
         EquipmentStats.Add(Speed);
 
-        Item DebugHeadA = new Item("DebugHeadA", "debugHeadA", 5000, ItemType.Head, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugChestA = new Item("DebugChestA", "debugChestA", 5001, ItemType.Chest, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugArmsA = new Item("DebugArmsA", "debugArmsA", 5002, ItemType.Arms, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugWaistA = new Item("DebugWaistA", "debugWaistA", 5003, ItemType.Waist, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugLegsA = new Item("DebugLegsA", "debugLegsA", 5004, ItemType.Legs, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugHeadA = new Item("DebugHeadA", "debugHeadA", 5000, ItemType.Head, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugChestA = new Item("DebugChestA", "debugChestA", 5001, ItemType.Chest, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugArmsA = new Item("DebugArmsA", "debugArmsA", 5002, ItemType.Arms, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugWaistA = new Item("DebugWaistA", "debugWaistA", 5003, ItemType.Waist, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugLegsA = new Item("DebugLegsA", "debugLegsA", 5004, ItemType.Legs, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugShieldA = new Item("DebugShieldA", "debugShieldA", 6000, ItemType.OffHand, WeaponType.Shield, ItemAction.Equip, EquipmentStats, "Debug Shield", false, false);
+        Item DebugSwordA = new Item("DebugSwordA", "debugSwordA", 6001, ItemType.MainHand, WeaponType.Sword, ItemAction.Equip, EquipmentStats, "Debug Sword", false, false);
 
+        Item DebugHeadB = new Item("DebugHeadB", "debugHeadB", 5000, ItemType.Head, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugChestB = new Item("DebugChestB", "debugChestB", 5001, ItemType.Chest, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugArmsB = new Item("DebugArmsB", "debugArmsB", 5002, ItemType.Arms, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugWaistB = new Item("DebugWaistB", "debugWaistB", 5003, ItemType.Waist, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
+        Item DebugLegsB = new Item("DebugLegsB", "debugLegsB", 5004, ItemType.Legs, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
 
-        Item DebugHeadB = new Item("DebugHeadB", "debugHeadB", 5000, ItemType.Head, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugChestB = new Item("DebugChestB", "debugChestB", 5001, ItemType.Chest, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugArmsB = new Item("DebugArmsB", "debugArmsB", 5002, ItemType.Arms, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugWaistB = new Item("DebugWaistB", "debugWaistB", 5003, ItemType.Waist, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
-        Item DebugLegsB = new Item("DebugLegsB", "debugLegsB", 5004, ItemType.Legs, ItemAction.Equip, EquipmentStats, "It blue.", false, false);
         database.AddItem(DebugHeadA);
         database.AddItem(DebugChestA);
         database.AddItem(DebugArmsA);
         database.AddItem(DebugWaistA);
         database.AddItem(DebugLegsA);
+        database.AddItem(DebugSwordA);
+        database.AddItem(DebugShieldA);
 
         database.AddItem(DebugHeadB);
         database.AddItem(DebugChestB);
@@ -49,15 +53,15 @@ public class ProgrammingTesting : MonoBehaviour
         database.AddItem(DebugLegsB);
 
 
-        Item Head = new Item("Standard Helmet", "starterHelmet", 0, ItemType.Head, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Helmet", false, false);
-        Item Chest = new Item("Standard Chestguard", "starterChest", 1, ItemType.Chest, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Chestguard", false, false);
-        Item Arms = new Item("Standard Arm Guards", "starterArms", 2, ItemType.Arms, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Arm Guards", false, false);
-        Item Waist = new Item("Standard Belt", "starterWaist", 3, ItemType.Waist, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Belt", false, false);
-        Item Legs = new Item("Standard Boots", "starterLegs", 4, ItemType.Legs, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Boots", false, false);
+        Item Head = new Item("Standard Helmet", "starterHelmet", 0, ItemType.Head, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Helmet", false, false);
+        Item Chest = new Item("Standard Chestguard", "starterChest", 1, ItemType.Chest, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Chestguard", false, false);
+        Item Arms = new Item("Standard Arm Guards", "starterArms", 2, ItemType.Arms, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Arm Guards", false, false);
+        Item Waist = new Item("Standard Belt", "starterWaist", 3, ItemType.Waist, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Belt", false, false);
+        Item Legs = new Item("Standard Boots", "starterLegs", 4, ItemType.Legs, WeaponType.NULL, ItemAction.Equip, EquipmentStats, "Standard issue Ranger Boots", false, false);
 
-        Item Mineral = new Item("Mineral", "mineral", 5, ItemType.Material,ItemAction.None, null, "Shiny", false, false);
-        Item Ivory = new Item("Ivory", "ivory", 6, ItemType.Material, ItemAction.None, null, "It's very white", false, false);
-        Item Hide = new Item("Hide", "hide", 7, ItemType.Material, ItemAction.None, null, "Taken from a wild animal.", false, false);
+        Item Mineral = new Item("Mineral", "mineral", 5, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "Shiny", false, false);
+        Item Ivory = new Item("Ivory", "ivory", 6, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "It's very white", false, false);
+        Item Hide = new Item("Hide", "hide", 7, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "Taken from a wild animal.", false, false);
 
 
         

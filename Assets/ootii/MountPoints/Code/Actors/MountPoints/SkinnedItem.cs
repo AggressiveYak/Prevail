@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine;
 using com.ootii.Base;
 using com.ootii.Geometry;
@@ -111,6 +112,8 @@ namespace com.ootii.Actors
             }
         }
 
+
+        
         /// <summary>
         /// Creates an instance of the prefab at the resource path
         /// </summary>
@@ -140,6 +143,9 @@ namespace com.ootii.Actors
 
             _GameObject = (GameObject)GameObject.Instantiate(lResource);
             if (_GameObject == null) { return null; }
+
+
+            //NetworkServer.Spawn(_GameObject);
 
             // Don't show the child in the hierarchy
             //lChild.hideFlags = HideFlags.HideInHierarchy;

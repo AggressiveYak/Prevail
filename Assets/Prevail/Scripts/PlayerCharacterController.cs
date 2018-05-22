@@ -12,6 +12,11 @@ public class PlayerCharacterController : NetworkBehaviour
     private Vector3 m_Move;
     private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 
+    public Camera cam;
+
+    public PlayerInput input;
+
+    public EquipmentController equipmentController;
 
     private void Start()
     {
@@ -19,6 +24,7 @@ public class PlayerCharacterController : NetworkBehaviour
         if (Camera.main != null)
         {
             m_Cam = Camera.main.transform;
+            cam = Camera.main;
         }
         else
         {
@@ -30,31 +36,28 @@ public class PlayerCharacterController : NetworkBehaviour
         // get the third person character ( this should never be null due to require component )
         m_Character = GetComponent<Character>();
 
-        if (localPlayerAuthority == false)
+        //if (localPlayerAuthority == false)
+        //{
+        //    return;
+        //}
+
+        if (!isLocalPlayer)
         {
+            //cam.enabled = false;
             return;
         }
 
-        if (isLocalPlayer)
-        {
 
-        }
+        cam.transform.parent.GetComponentInParent<AutoCam>().Target = this.transform;
 
-        m_Cam.parent.GetComponentInParent<AutoCam>().Target = this.transform;
-        
     }
 
 
     private void Update()
     {
-        if (hasAuthority == false)
+        if (!isLocalPlayer)
         {
             return;
-        }
-
-        if (!m_Jump)
-        {
-            m_Jump = Input.GetButtonDown("Jump");
         }
     }
 
@@ -62,35 +65,41 @@ public class PlayerCharacterController : NetworkBehaviour
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
-        if (hasAuthority == false)
+        if (!isLocalPlayer)
         {
             return;
         }
 
         // read inputs
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        bool crouch = Input.GetKey(KeyCode.C);
+        float x = input.LeftStickInput.x;
+        float y = -input.LeftStickInput.y;
+
+        bool aButton = input.AButtonInput;
+        bool bButton = input.BButtonInput;
+        bool xButton = input.XButtonInput;
+        bool yButton = input.YButtonInput;
+
+        float rightTrigger = input.RightTrigger;
+        float leftTrigger = input.LeftTrigger;
 
         // calculate move direction to pass to character
         if (m_Cam != null)
         {
             // calculate camera relative direction to move:
             m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
-            m_Move = v * m_CamForward + h * m_Cam.right;
+            m_Move = y * m_CamForward + x * m_Cam.right;
         }
         else
         {
             // we use world-relative directions in the case of no main camera
-            m_Move = v * Vector3.forward + h * Vector3.right;
+            m_Move = y * Vector3.forward + x * Vector3.right;
         }
-#if !MOBILE_INPUT
+
         // walk speed multiplier
-        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
-#endif
+        m_Move *= 0.5f;
 
         // pass all parameters to the character control script
-        m_Character.Move(m_Move, crouch, m_Jump);
+        m_Character.ReceiveInput(m_Move, aButton, bButton, xButton, yButton, rightTrigger, leftTrigger, false, false);
         m_Jump = false;
     }
 }

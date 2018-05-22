@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum WeaponType
+{
+    Sword,
+    Shield,
+    Crossbow,
+    NULL
+}
+
 public enum ItemType
 {
     Head,
@@ -9,15 +18,19 @@ public enum ItemType
     Arms,
     Waist,
     Legs,
+    MainHand,
+    OffHand,
     Material,
-    Key
+    Key,
+    NULL
 }
 
 public enum ItemAction
 {
     Equip,
     Use,
-    None
+    None,
+    NULL
 }
 
 [System.Serializable]
@@ -34,6 +47,8 @@ public class Item
     //this item's type
     public ItemType itemType;
 
+    public WeaponType weaponType;
+
     public ItemAction action;
 
     //stats the item has
@@ -47,12 +62,26 @@ public class Item
     //can the item be stacked
     public bool stackable;
 
-    public Item(string itemName, string slug, int ID, ItemType itemType, ItemAction action, List<BaseStat> stats, string description, bool modifier, bool stackable)
+    public Item()
+    {
+        itemName = "NULL";
+        slug = "null";
+        ID = 999999999;
+        itemType = ItemType.NULL;
+        action = ItemAction.NULL;
+        stats = null;
+        description = "THIS ITEM IS NULL";
+        modifier = false;
+        stackable = false;
+    }
+
+    public Item(string itemName, string slug, int ID, ItemType itemType, WeaponType weaponType, ItemAction action, List<BaseStat> stats, string description, bool modifier, bool stackable)
     {
         this.itemName = itemName;
         this.slug = slug;
         this.ID = ID;
         this.itemType = itemType;
+        this.weaponType = weaponType;
         this.action = action;
         this.stats = stats;
         this.description = description;

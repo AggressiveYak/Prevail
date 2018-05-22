@@ -1,6 +1,7 @@
 /// Tim Tryzbiak, ootii, LLC
 using System;
 using com.ootii.Data.Serializers;
+using UnityEngine.Networking;
 
 namespace com.ootii.Base
 {

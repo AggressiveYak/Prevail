@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using com.ootii.Actors;
 
-public class EquipmentController : MonoBehaviour
+public class EquipmentController : NetworkBehaviour
 {
     public GameObject avatar;
     public MountPoints mountPoints;
@@ -14,6 +15,8 @@ public class EquipmentController : MonoBehaviour
     public GameObject arms;
     public GameObject waist;
     public GameObject legs;
+    public GameObject mainHand;
+    public GameObject offHand;
 
     [Header("Item Objects")]
     public Item equippedHead;
@@ -22,10 +25,37 @@ public class EquipmentController : MonoBehaviour
     public Item equippedWaist;
     public Item equippedLegs;
 
-    public Item equippedWeapon;
+    public Item equippedMainHand;
+    public Item equippedOffHand;
+
+    public List<GameObject> equippedWeapons;
+
+
+    public bool sheathed = true;
+
+    private void Start()
+    {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+        // DEBUG----------------------------------------------
+        //----------------------------------------------------
+
+        EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugSwordA"));
+        EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugShieldA"));
+
+    }
 
     private void Update()
     {
+
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         //DEBUG
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -69,15 +99,32 @@ public class EquipmentController : MonoBehaviour
             EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugLegsB"));
         }
 
-
-
-
-
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugSwordA"));
+            EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugShieldA"));
+        }
     }
 
-    public void EquipItem(Item item)
+    [Command]
+    public void CmdEquipItem(int iType, int wType, string slug)
     {
-        switch (item.itemType)
+        EquipItem(iType, wType, slug);
+        RpcEquipItem(iType, wType, slug);
+    }
+
+    [ClientRpc]
+    public void RpcEquipItem(int iType, int wType, string slug)
+    {
+        EquipItem(iType, wType, slug);
+    }
+
+    public void EquipItem(int iType, int wType, string slug)
+    {
+        ItemType itemType = (ItemType)iType;
+        WeaponType weaponType = (WeaponType)wType;
+
+        switch (itemType)
         {
             case ItemType.Head:
                 if (head != null)
@@ -86,9 +133,9 @@ public class EquipmentController : MonoBehaviour
                     Destroy(head);
                 }
 
-                equippedHead = item;
-               
-                head = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                //equippedHead = item;
+
+                head = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + slug).GameObject;
                 break;
             case ItemType.Chest:
 
@@ -98,8 +145,7 @@ public class EquipmentController : MonoBehaviour
                     Destroy(chest);
                 }
 
-                equippedChest = item;
-                chest = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                chest = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + slug).GameObject;
                 break;
             case ItemType.Arms:
 
@@ -109,8 +155,7 @@ public class EquipmentController : MonoBehaviour
                     Destroy(arms);
                 }
 
-                equippedArms = item;
-                arms = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                arms = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + slug).GameObject;
 
                 break;
             case ItemType.Waist:
@@ -121,8 +166,7 @@ public class EquipmentController : MonoBehaviour
                     Destroy(waist);
                 }
 
-                equippedWaist = item;
-                waist = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                waist = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + slug).GameObject;
 
                 break;
             case ItemType.Legs:
@@ -133,9 +177,164 @@ public class EquipmentController : MonoBehaviour
                     Destroy(legs);
                 }
 
-                equippedLegs = item;
-                legs = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                legs = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + slug).GameObject;
 
+                break;
+            case ItemType.MainHand:
+                if (mainHand != null)
+                {
+                    Mount mount = mainHand.GetComponent<Mount>();
+                    MountPoint mp = mount.Point;
+                    mountPoints.DisconnectMountPoints(mp);
+                    equippedWeapons.Remove(mainHand);
+                    Destroy(mainHand);
+                }
+
+                mainHand = mountPoints.ConnectMountPoints("Back " + weaponType, "Prefabs/Weapons/" + slug, "MountPoint");
+                mainHand.GetComponent<Weapon>().AssignItem(ItemDatabaseManager.Instance.GetItemFromDatabase(slug));
+                equippedWeapons.Add(mainHand);
+                break;
+
+            case ItemType.OffHand:
+                if (offHand != null)
+                {
+                    Mount mount = offHand.GetComponent<Mount>();
+                    MountPoint mp = mount.Point;
+                    mountPoints.DisconnectMountPoints(mp);
+                    equippedWeapons.Remove(offHand);
+                    Destroy(offHand);
+                }
+
+                offHand = mountPoints.ConnectMountPoints("Back " + weaponType, "Prefabs/Weapons/" + slug, "MountPoint");
+                offHand.GetComponent<Weapon>().AssignItem(ItemDatabaseManager.Instance.GetItemFromDatabase(slug));
+
+                equippedWeapons.Add(offHand);
+
+                break;
+            case ItemType.Material:
+                break;
+            case ItemType.Key:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void Sheathe()
+    {
+        if (sheathed)
+        {
+            return;
+        }
+
+        foreach (GameObject go in equippedWeapons)
+        {
+            Item item = go.GetComponent<Weapon>().item;
+            Mount mount = go.GetComponent<Mount>();
+            MountPoint mp = mount.Point;
+            mountPoints.DisconnectMountPoints(mp);
+
+            mountPoints.ConnectMountPoints("Back " + item.weaponType, mp);
+        }
+
+        sheathed = true;
+    }
+
+    public void Unsheathe()
+    {
+        if (!sheathed)
+        {
+            return;
+        }
+
+        foreach (GameObject go in equippedWeapons)
+        {
+            Mount mount = go.GetComponent<Mount>();
+            MountPoint mp = mount.Point;
+            mountPoints.DisconnectMountPoints(mp);
+
+            switch (go.GetComponent<Weapon>().item.weaponType)
+            {
+                case WeaponType.Sword:
+                    mountPoints.ConnectMountPoints("Main Hand", go, "MountPoint");
+                    break;
+                case WeaponType.Shield:
+                    mountPoints.ConnectMountPoints("Off Hand", go, "MountPoint");
+                    break;
+                case WeaponType.Crossbow:
+                    break;
+                case WeaponType.NULL:
+                    break;
+                default:
+                    break;
+            }
+        }
+        sheathed = false;
+    }
+
+
+    public void EquipItem(Item item)
+    {
+        CmdEquipItem((int)item.itemType, (int)item.weaponType, item.slug);
+        switch (item.itemType)
+        {
+            case ItemType.Head:
+                equippedHead = item;
+               
+                //head = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                break;
+            case ItemType.Chest:
+
+                //if (chest != null)
+                //{
+                //    mountPoints.RemoveSkinnedItem("F_" + equippedChest.slug);
+                //    Destroy(chest);
+                //}
+
+                equippedChest = item;
+                //chest = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+                break;
+            case ItemType.Arms:
+
+                //if (arms != null)
+                //{
+                //    mountPoints.RemoveSkinnedItem("F_" + equippedArms.slug);
+                //    Destroy(arms);
+                //}
+
+                equippedArms = item;
+                //arms = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+
+                break;
+            case ItemType.Waist:
+
+                //if (waist != null)
+                //{
+                //    mountPoints.RemoveSkinnedItem("F_" + equippedWaist.slug);
+                //    Destroy(waist);
+                //}
+
+                equippedWaist = item;
+                //waist = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+
+                break;
+            case ItemType.Legs:
+
+                //if (legs != null)
+                //{
+                //    mountPoints.RemoveSkinnedItem("F_" + equippedLegs.slug);
+                //    Destroy(legs);
+                //}
+
+                equippedLegs = item;
+                //legs = mountPoints.AddSkinnedItem("Prefabs/Armor/F_" + item.slug).GameObject;
+
+                break;
+            case ItemType.MainHand:
+                equippedMainHand = item;
+                break;
+            case ItemType.OffHand:
+                equippedOffHand = item;
                 break;
             case ItemType.Material:
                 break;

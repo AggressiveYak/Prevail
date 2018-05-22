@@ -620,7 +620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4488684732658608}
-  - component: {fileID: 95573120495237492}
+  - component: {fileID: 114937241872470078}
   m_Layer: 0
   m_Name: F_DebugHeadA
   m_TagString: Untagged
@@ -2362,24 +2362,38 @@ Transform:
   m_Father: {fileID: 4239943434943984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95573120495237492
-Animator:
-  serializedVersion: 3
+--- !u!114 &114937241872470078
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544231690555926}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 528eb29b710b1f0469f07d5a76a22a8f, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 239
+    i1: 161
+    i2: 198
+    i3: 19
+    i4: 112
+    i5: 216
+    i6: 78
+    i7: 228
+    i8: 139
+    i9: 223
+    i10: 191
+    i11: 38
+    i12: 231
+    i13: 28
+    i14: 68
+    i15: 183
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!137 &137822065231374694
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
