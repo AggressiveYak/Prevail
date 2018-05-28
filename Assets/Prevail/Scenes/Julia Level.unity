@@ -1452,77 +1452,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2a0db5391b1e446871ca08a4120abd, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &211308370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 211308371}
-  - component: {fileID: 211308373}
-  - component: {fileID: 211308372}
-  m_Layer: 0
-  m_Name: Jungle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &211308371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 211308370}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3479, y: -81, z: -2282}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!154 &211308372
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 211308370}
-  m_Material: {fileID: 0}
-  m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 4a07aa91a21b99840b39a3cc4d04eee1, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &211308373
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 211308370}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_TerrainData: {fileID: 15600000, guid: 4a07aa91a21b99840b39a3cc4d04eee1, type: 2}
-  m_TreeDistance: 2000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMaximumLOD: 0
-  m_CastShadows: 1
-  m_DrawHeightmap: 1
-  m_DrawTreesAndFoliage: 1
-  m_ReflectionProbeUsage: 1
-  m_MaterialType: 0
-  m_LegacySpecular:
-    serializedVersion: 2
-    rgba: 4286545791
-  m_LegacyShininess: 0.078125
-  m_MaterialTemplate: {fileID: 0}
-  m_BakeLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.0512
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!43 &219088495
 Mesh:
   m_ObjectHideFlags: 0
@@ -11688,6 +11617,52 @@ Mesh:
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimized: 0
+--- !u!1001 &1109529295
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3479
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2282
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490326758634716, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380397276912170, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+      propertyPath: m_Name
+      value: Jungle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 41d0a197e4a7acd43bcdf36690f00d53, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!43 &1111794410
 Mesh:
   m_ObjectHideFlags: 0
@@ -17658,7 +17633,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh23802
+  m_Name: pb_Mesh165322
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
