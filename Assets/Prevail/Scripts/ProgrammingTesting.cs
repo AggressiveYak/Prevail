@@ -74,6 +74,17 @@ public class ProgrammingTesting : MonoBehaviour
         database.AddItem(Ivory);
         database.AddItem(Hide);
 
+
+        Item whiteOre = new Item("White Ore", "whiteOre", 500, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "It's white.", false, true);
+        Item redOre = new Item("Red Ore", "redOre", 501, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "It's red.", false, true);
+        Item blueOre = new Item("Blue Ore", "blueOre", 502, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "It's blue.", false, true);
+        Item yellowOre = new Item("Yellow Ore", "whiteOre", 503, ItemType.Material, WeaponType.NULL, ItemAction.None, null, "It's yellow.", false, true);
+
+        database.AddItem(whiteOre);
+        database.AddItem(redOre);
+        database.AddItem(blueOre);
+        database.AddItem(yellowOre);
+
         ItemDatabaseManager.Instance.UpdateDatabase(database);
         ItemDatabaseManager.Instance.SaveDatabase();
     }
