@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4c391976b8fb8894585faeabea605779
+guid: 36b0d84aeaf320f4c84d31d0717afc73
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -51,7 +51,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 1
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
