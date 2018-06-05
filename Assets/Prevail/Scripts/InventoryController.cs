@@ -10,12 +10,13 @@ public class InventoryController : MonoBehaviour
     public void AddItem(string slug)
     {
         Item item = ItemDatabaseManager.Instance.GetItemFromDatabase(slug);
-        
+        AddItem(item);
     }
 
     public void AddItem(Item item)
     {
         items.Add(item);
+        UIEventHandler.ItemAddedToInventory(item);
     }
 
 

@@ -18,6 +18,13 @@ public class PlayerCharacterController : NetworkBehaviour
 
     public EquipmentController equipmentController;
 
+    bool canOpenMenu = true;
+
+    private void Awake()
+    {
+        UIEventHandler.OnGameMenuClosed += UnlockControl;
+    }
+
     private void Start()
     {
         // get the transform of the main camera
@@ -52,6 +59,14 @@ public class PlayerCharacterController : NetworkBehaviour
 
     }
 
+    private void UnlockControl()
+    {
+        input.playerControllerInputBlocked = false;
+    }
+
+
+
+
 
     private void Update()
     {
@@ -68,6 +83,13 @@ public class PlayerCharacterController : NetworkBehaviour
         if (!isLocalPlayer)
         {
             return;
+        }
+
+
+        if (input.BackButtonInput && !input.playerControllerInputBlocked)
+        {
+            input.playerControllerInputBlocked = true;
+            UIEventHandler.GameMenuOpened();
         }
 
         // read inputs

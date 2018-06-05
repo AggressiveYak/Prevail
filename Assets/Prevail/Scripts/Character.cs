@@ -17,6 +17,9 @@ public class Character : NetworkBehaviour
     [SerializeField] float m_AnimSpeedMultiplier = 1f;
     [SerializeField] float m_GroundCheckDistance = 0.1f;
 
+    [SerializeField] GameObject interactTarget;
+    public bool canInteract = false;
+
     Rigidbody m_Rigidbody;
     Animator anim;
     bool m_IsGrounded;
@@ -149,6 +152,9 @@ public class Character : NetworkBehaviour
         anim.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
         //m_Animator.SetBool("Crouch", m_Crouching);
         anim.SetBool("OnGround", m_IsGrounded);
+
+        anim.SetBool("Can Interact", canInteract);
+
         anim.SetBool("A Button", aButton);
         anim.SetBool("B Button", bButton);
         anim.SetBool("X Button", xButton);
@@ -255,6 +261,36 @@ public class Character : NetworkBehaviour
             m_IsGrounded = false;
             m_GroundNormal = Vector3.up;
             anim.applyRootMotion = false;
+        }
+    }
+
+    public void Interact()
+    {
+        if (!canInteract)
+        {
+            return;
+        }
+
+        interactTarget.GetComponent<IInteractable>().Interact(this.gameObject);
+        canInteract = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<IInteractable>() != null)
+        {
+            interactTarget = other.gameObject;
+            canInteract = true;
+        }
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<IInteractable>() != null)
+        {
+            interactTarget = null;
+            canInteract = false;
         }
     }
 }

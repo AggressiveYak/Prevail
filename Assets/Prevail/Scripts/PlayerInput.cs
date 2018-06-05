@@ -164,7 +164,7 @@ public class PlayerInput : MonoBehaviour
     {
         get
         {
-            return backButton;
+            return backButton && !playerControllerInputBlocked;
         }
     }
     public bool StartButtonInput

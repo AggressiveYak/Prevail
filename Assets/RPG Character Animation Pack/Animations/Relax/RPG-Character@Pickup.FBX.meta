@@ -186,9 +186,10 @@ ModelImporter:
       curves: []
       events:
       - time: 0.48556697
-        functionName: Hit
+        functionName: Interact
         data: 
-        objectReferenceParameter: {instanceID: 0}
+        objectReferenceParameter: {fileID: 11500000, guid: 0507e74eb3a44fd4997a7e45cf7f52b9,
+          type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

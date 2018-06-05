@@ -681,6 +681,54 @@
             "description": "Taken from a wild animal.",
             "modifier": false,
             "stackable": false
+        },
+        {
+            "itemName": "White Ore",
+            "slug": "whiteOre",
+            "ID": 500,
+            "itemType": 7,
+            "weaponType": 3,
+            "action": 2,
+            "stats": [],
+            "description": "It's white.",
+            "modifier": false,
+            "stackable": true
+        },
+        {
+            "itemName": "Red Ore",
+            "slug": "redOre",
+            "ID": 501,
+            "itemType": 7,
+            "weaponType": 3,
+            "action": 2,
+            "stats": [],
+            "description": "It's red.",
+            "modifier": false,
+            "stackable": true
+        },
+        {
+            "itemName": "Blue Ore",
+            "slug": "blueOre",
+            "ID": 502,
+            "itemType": 7,
+            "weaponType": 3,
+            "action": 2,
+            "stats": [],
+            "description": "It's blue.",
+            "modifier": false,
+            "stackable": true
+        },
+        {
+            "itemName": "Yellow Ore",
+            "slug": "whiteOre",
+            "ID": 503,
+            "itemType": 7,
+            "weaponType": 3,
+            "action": 2,
+            "stats": [],
+            "description": "It's yellow.",
+            "modifier": false,
+            "stackable": true
         }
     ]
 }
