@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CraftingItemsMenu : MonoBehaviour
 {
+    [Header("Panels")]
     public GameObject craftingPanel;
     public GameObject inventoryPanel;
     public GameObject quickPanel;
     public GameObject suitPanel;
+
+    [Header("Buttons")]
+
+    public Button firstSelectable;
 
 
     public void OpenCraftingItemsPanel()
@@ -29,6 +35,7 @@ public class CraftingItemsMenu : MonoBehaviour
         inventoryPanel.SetActive(false);
         quickPanel.SetActive(false);
         suitPanel.SetActive(false);
+        firstSelectable.Select();
     }
 
 

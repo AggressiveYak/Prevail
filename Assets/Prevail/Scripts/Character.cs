@@ -293,4 +293,9 @@ public class Character : NetworkBehaviour
             canInteract = false;
         }
     }
+
+    public override void OnStartLocalPlayer()
+    {
+        gameObject.tag = "Local";
+    }
 }

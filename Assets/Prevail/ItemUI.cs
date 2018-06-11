@@ -25,6 +25,17 @@ public class ItemUI : MonoBehaviour, ISelectHandler
         {
             button = GetComponent<Button>();
         }
+        button.onClick.RemoveAllListeners();
+        if (item.action == ItemAction.Equip)
+        {
+            button.onClick.AddListener(EquipItem);
+        }
+    }
 
+    private void EquipItem()
+    {
+        GameObject go = GameObject.FindGameObjectWithTag("Local");
+        go.GetComponent<EquipmentController>().EquipItem(item);
+        ItemBoxUI.Instance.OpenEquipmentMenu();
     }
 }

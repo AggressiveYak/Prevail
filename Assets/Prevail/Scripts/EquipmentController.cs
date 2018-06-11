@@ -46,6 +46,12 @@ public class EquipmentController : NetworkBehaviour
         EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugSwordA"));
         EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase("debugShieldA"));
 
+        EquipItem("debugHeadA");
+        EquipItem("debugChestA");
+        EquipItem("debugArmsA");
+        EquipItem("debugWaistA");
+        EquipItem("debugLegsA");
+
     }
 
     private void Update()
@@ -272,6 +278,10 @@ public class EquipmentController : NetworkBehaviour
         sheathed = false;
     }
 
+    public void EquipItem(string slug)
+    {
+        EquipItem(ItemDatabaseManager.Instance.GetItemFromDatabase(slug));
+    }
 
     public void EquipItem(Item item)
     {

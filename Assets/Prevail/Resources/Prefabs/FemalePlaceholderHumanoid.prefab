@@ -2307,6 +2307,8 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
+  interactTarget: {fileID: 0}
+  canInteract: 0
 --- !u!114 &114258550048063664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2580,6 +2582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+  equipment: []
 --- !u!114 &114964868272118668
 MonoBehaviour:
   m_ObjectHideFlags: 1

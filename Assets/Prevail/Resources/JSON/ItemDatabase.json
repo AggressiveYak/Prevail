@@ -720,7 +720,7 @@
         },
         {
             "itemName": "Yellow Ore",
-            "slug": "whiteOre",
+            "slug": "yellowOre",
             "ID": 503,
             "itemType": 7,
             "weaponType": 3,
