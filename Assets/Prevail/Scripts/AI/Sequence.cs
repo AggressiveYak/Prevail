@@ -39,7 +39,7 @@ namespace BehaviorTrees
                         continue;
                     default:
                         m_nodeState = NodeStates.SUCCESS;
-                        break;
+                        return m_nodeState;
                 }
             }
             m_nodeState = anyChildRunning ? NodeStates.RUNNING : NodeStates.SUCCESS;
