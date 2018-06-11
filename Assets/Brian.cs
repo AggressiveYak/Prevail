@@ -12,13 +12,17 @@ public class Brian : NetworkBehaviour
 
     public SphereCollider hostilityArea;
 
-    public GameObject wanderTarget;
+    public GameObject navAgentDestination;
     public float minDistanceToWanderTarget = 1;
     public float minChargeDistance = 10;
 
     public float walkSpeed = 3.5f;
-
     public float runSpeed = 5;
+
+    public float timer = 0;
+    public float chargeTime = 3;
+
+    bool waiting = false;
 
     ActionNode setTargetNode;
 
@@ -37,7 +41,28 @@ public class Brian : NetworkBehaviour
 
     ActionNode moveToTargetDestinationNode;
 
-    ActionNode playerproximityCheckNode;
+
+
+    Sequence attackPlayerSequence;
+
+    ActionNode hostileTargetNullCheckNode;
+
+
+    Selector chargeSelector;
+    Sequence chargeTargetDistanceCheckSequence;
+    Inverter hostileTargetChargeDistanceCheckNode;
+    ActionNode moveTowardsPlayerAction;
+    
+
+    Sequence chargeTargetCheckSequence;
+    Inverter chargeTargetCheckNode;
+    ActionNode setChargeTargetNode;
+
+
+
+    ActionNode waitAction;
+    ActionNode chargeAction;
+    ActionNode chargeEndedCheckAction;
 
     Selector rootNode;
     Sequence playerNearbySequence;
@@ -48,10 +73,9 @@ public class Brian : NetworkBehaviour
         setWanderTargetNode = new ActionNode(SetNewWanderTarget);
 
         atWanderTargetCheckInverter = new ActionNode(AtWanderTargetCheck);
-        resetWanderTargetNode = new ActionNode(ResetWanderTarget);
+        resetWanderTargetNode = new ActionNode(ResetDestination);
 
         moveToTargetDestinationNode = new ActionNode(MoveToTargetDestination);
-
 
         wanderTargetSequence = new Sequence(new List<Node>
         {
@@ -78,26 +102,58 @@ public class Brian : NetworkBehaviour
         });
 
 
+        hostileTargetNullCheckNode = new ActionNode(HostileTargetNullCheck);
+        hostileTargetChargeDistanceCheckNode = new Inverter(new ActionNode(ChargeDistanceCheck));
+        moveTowardsPlayerAction = new ActionNode(MoveTowardsPlayer);
 
+        chargeTargetCheckNode = new Inverter(new ActionNode(ChargeTargetCheck));
+        setChargeTargetNode = new ActionNode(SetChargeTarget);
+        waitAction = new ActionNode(Wait);
+        chargeAction = new ActionNode(Charge);
+        chargeEndedCheckAction = new ActionNode(ChargeEndedCheck);
+
+        chargeTargetCheckSequence = new Sequence(new List<Node>
+        {
+            chargeTargetCheckNode,
+            setChargeTargetNode,
+            waitAction,
+            chargeAction,
+            chargeEndedCheckAction,
+            waitAction,
+        });
+
+        chargeTargetDistanceCheckSequence = new Sequence(new List<Node>
+        {
+            hostileTargetChargeDistanceCheckNode,
+            moveTowardsPlayerAction,
+        });
+
+        chargeSelector = new Selector(new List<Node>
+        {
+            chargeTargetDistanceCheckSequence,
+            chargeTargetCheckSequence,
+        });
+
+        attackPlayerSequence = new Sequence(new List<Node>
+        {
+            hostileTargetNullCheckNode,
+            chargeSelector,
+        });
 
         rootNode = new Selector(new List<Node>
         {
+            attackPlayerSequence,
             wanderSelector
         });
 
-
-
-
         //setTargetNode = new ActionNode(SetTarget);
-        //playerproximityCheckNode = new ActionNode(HostileTargetProximityCheck);
+        
         //playerNearbySequence = new Sequence(new List<Node> 
         //{
         //    playerproximityCheckNode,
         //    setTargetNode,
 
         //});
-
-
 
         nav = GetComponent<NavMeshAgent>();
     }
@@ -106,19 +162,92 @@ public class Brian : NetworkBehaviour
     private void Update()
     {
         rootNode.Evaluate();
+    }
+    private NodeStates ChargeEndedCheck()
+    {
+        if (Vector3.Distance(transform.position, nav.destination) <= 0.5)
+        {
+            timer = 0;
+            return NodeStates.SUCCESS;
+        }
 
+        return NodeStates.FAILURE;
+    }
+
+    private NodeStates Wait()
+    {
+        nav.isStopped = true;
+       
+        timer += Time.deltaTime;
+        if (timer < chargeTime)
+        {
+            //transform.LookAt(navAgentDestination.transform);
+
+            return NodeStates.FAILURE;
+        }
+
+        //timer = 0;
+        return NodeStates.SUCCESS;
+    }
+
+    private NodeStates ChargeTargetCheck()
+    {
+        if (navAgentDestination.activeSelf == false)
+        {
+            return NodeStates.FAILURE;
+        }
+
+        return NodeStates.SUCCESS;
+    }
+
+    private NodeStates MoveTowardsPlayer()
+    {
+        nav.SetDestination(hostilityTarget.transform.position);
+        nav.speed = walkSpeed;
+        nav.enabled = true;
+        nav.isStopped = false;
+        return NodeStates.SUCCESS;
+    }
+
+
+    private NodeStates SetChargeTarget()
+    {
+        navAgentDestination.transform.position = hostilityTarget.transform.position + (transform.forward * 2);
+        navAgentDestination.SetActive(true);
+        return NodeStates.SUCCESS;
+    }
+
+    private NodeStates ClearNavAgentDestination()
+    {
+        navAgentDestination.SetActive(false);
+        return NodeStates.SUCCESS;
     }
 
     private NodeStates MoveToTargetDestination()
     {
+        nav.speed = walkSpeed;
         nav.enabled = true;
-        nav.SetDestination(wanderTarget.transform.position);
+        nav.SetDestination(navAgentDestination.transform.position);
+        return NodeStates.SUCCESS;
+    }
+
+    private NodeStates Charge()
+    {
+        nav.speed = runSpeed;
+        nav.SetDestination(transform.forward * (minChargeDistance + 2));
+        nav.isStopped = false;
         return NodeStates.SUCCESS;
     }
 
     private NodeStates WanderTargetNullCheck()
     {
-        if (wanderTarget == null)
+        if (navAgentDestination == null)
+        {
+            navAgentDestination = new GameObject("Brian Wander Target");
+            navAgentDestination.SetActive(false);
+        }
+
+        if (navAgentDestination.activeSelf == false)
         {
             return NodeStates.FAILURE;
         }
@@ -128,17 +257,17 @@ public class Brian : NetworkBehaviour
         }
     }
 
-    private NodeStates ResetWanderTarget()
+    private NodeStates ResetDestination()
     {
-        Destroy(wanderTarget);
+        navAgentDestination.SetActive(false);
         nav.enabled = false;
         return NodeStates.SUCCESS;
     }
 
     private NodeStates SetNewWanderTarget()
     {
-        wanderTarget = new GameObject("Wander Target");
-        wanderTarget.transform.position = RandomNavSphere(transform.position, hostilityArea.radius, -1);
+        navAgentDestination.SetActive(true);
+        navAgentDestination.transform.position = RandomNavSphere(transform.position, hostilityArea.radius, -1);
         return NodeStates.SUCCESS;
     }
 
@@ -156,11 +285,13 @@ public class Brian : NetworkBehaviour
         }
     }
 
-    private NodeStates HostileTargetProximityCheck()
+
+    private NodeStates HostileTargetNullCheck()
     {
         if (hostilityTarget)
         {
             Debug.Log("Player is in range");
+            navAgentDestination.SetActive(false);
             return NodeStates.SUCCESS;
         }
         else
@@ -170,9 +301,21 @@ public class Brian : NetworkBehaviour
         }
     }
 
+    private NodeStates ChargeDistanceCheck()
+    {
+        if (Vector3.Distance(transform.position, hostilityTarget.transform.position) <= minChargeDistance )
+        {
+            Debug.Log("Player is in charge range");
+            return NodeStates.SUCCESS;
+        }
+
+        Debug.Log("Player is not in charge range");
+        return NodeStates.FAILURE;
+    }
+
     private NodeStates AtWanderTargetCheck()
     {
-        if (Vector3.Distance(transform.position, wanderTarget.transform.position) <= minDistanceToWanderTarget)
+        if (Vector3.Distance(transform.position, navAgentDestination.transform.position) <= minDistanceToWanderTarget)
         {
             return NodeStates.SUCCESS;
         }
@@ -207,16 +350,6 @@ public class Brian : NetworkBehaviour
 
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == hostilityTarget)
-        {
-            hostilityTarget = null;
-        }
-    }
-
-
-
     private void OnDrawGizmos()
     {
         Color oldColor = Gizmos.color;
@@ -227,14 +360,16 @@ public class Brian : NetworkBehaviour
 
 
 
-        if (wanderTarget != null)
+        if (navAgentDestination != null)
         {
-            Gizmos.color = Color.black;
-            Gizmos.DrawLine(transform.position, wanderTarget.transform.position);
-            Gizmos.DrawWireSphere(wanderTarget.transform.position, 1);
-            Gizmos.color = oldColor;
+            if (navAgentDestination.activeSelf)
+            {
+                Gizmos.color = Color.black;
+                Gizmos.DrawLine(transform.position, navAgentDestination.transform.position);
+                Gizmos.DrawWireSphere(navAgentDestination.transform.position, 1);
+                Gizmos.color = oldColor;
+            }
         }
-
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, minChargeDistance);
