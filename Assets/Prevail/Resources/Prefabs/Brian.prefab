@@ -158,6 +158,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostilityTarget: {fileID: 0}
   hostilityArea: {fileID: 135800745069016564}
+  wanderTarget: {fileID: 0}
+  minDistanceToWanderTarget: 0
+  minChargeDistance: 10
+  walkSpeed: 3.5
+  runSpeed: 5
 --- !u!135 &135800745069016564
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -168,7 +173,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136031567590219272
 CapsuleCollider:
